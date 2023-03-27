@@ -10,6 +10,10 @@ This will use for pytorch note to determine the functionality of the pytorch and
 First we need to save a pytorch model, after that we can load the model for further work. Let's see how to save a pytorch model
 The method saving and loading model in pytorch:
 |pyTroch method|What does it do?|
-|--------------|----------------|
+|:------------:|:----------------|
+|```torch.save```|Saves a seralized object to disk using python's pickle utility. Models, tensors and various other python object like dictionaries can be saved using ```torch.save```.|
+|```torch.load```|Uses ```pickle``'s unpicking features to deserialize and load pickled Python object files (like models, tensor or dictionaries) into memory. You can also set which device to load to object to (CPU or GPU etc.)|
+|```torch.nn.Module.load_state_dict```|Loads a model's parameter dictionary (```model.state_dict()```) using a saved ```state_dict()``` object.|
+
 #### How to save a pytorch model?
 There are several stpe to save a pytorch model
