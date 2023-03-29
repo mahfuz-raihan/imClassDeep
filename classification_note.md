@@ -1,7 +1,7 @@
 ## 1. Architecture of a classification neural network
 |**Hyperparameter**| **Binary Classification**  | **Multiclass Classfication**  |
 |:----------------:|----------------------------|-------------------------------|
-|Input layer shape ```(in_features)```| Same as number of features (e.g. 5 for age, sex, height, weight, smoking status in heart disease prediction)  | As like binary classification  |
+|**Input layer shape** ```(in_features)```| Same as number of features (e.g. 5 for age, sex, height, weight, smoking status in heart disease prediction)  | As like binary classification  |
 |**Hidden layer(s)**| Problem specific, minimum = 1, maximum = unlimited  | As like binary classification |
 | **Neurons per hidden layer**  | Problem specific, generally 10 to 512  | As like binary classification  |
 | **Output layer shape** ```(out_features)```  | 1 (one or other)  | 1 per class (e.g. 3 for food, person or dog photo)  |
@@ -53,11 +53,40 @@ We'll break it down into a few parts.
 
 ### **Loss fucntion and optimizer**
 There has some loss fucntion/cost function and optimizer for the model improvement
-|  Loss function/Optimizer | Problem type  | Pytorch code  |
+|  **Loss function/Optimizer** | **Problem type**  | **Pytorch code**  |
 |:-:|---|---|
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
+| Stochastic Gradient Descent (SGD) optimizer  | Classification, regression, many others.  |  ```torch.optim.SGD()``` |
+| Adam Optimizer  | Classifiction, regression, many others  | ```torch.optim.Adam()```  |
+| Binary cross entropy loss  | Binary classification  | ```torch.nn.BCELossWithLogits``` or ```torch.nn.BCELoss```  |
+| Cross entropy loss  | Multi-class classification  | ```torch.nn.CrossEntropyLoss```  |
+| Mean Absolute error (MAE) or L1 Loss  | Regression  | ```torch.nn.L1Loss```  |
+| Mean Squared error (MSE) or L2 Loss  | Regression  | ```torch.nn.MSELoss```  |
+
+
+## 4. Train model
+Training a model has a certain loop, we are decsribing below:
+1. **Forward**: The mdoel goes through all of the training data once, performing it's ```forward()``` fucntion calculations(```model(x_trian)```)
+2. **Calculate the loss**: The model's outputs (predictions) are compared to the ground truth and evaluated to see how wrong they are (```loss = loss_fn(y_pred, y_train```).
+3. **Zero gradients**: The optimizers gradiants are set to zero (they are accumulated by default) so the can be recalculated for the specific training step (```optimizer.zero_grad())
+4. **Perform Backpropgation on the loss**: Camputes the gradient of the loss with respect for every model parameters to be updated (each parameter with ```required_grad=True```). This is known as ```backpropagation```, or 'backward'(```loss.backward()```).
+5. **Step the optimizer (gradiant descent)**: Update the parameters with ```requires_grad=True```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+These information captured from this (blog)[https://www.learnpytorch.io]
