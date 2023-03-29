@@ -12,7 +12,7 @@ The method saving and loading model in pytorch:
 |PyTroch method|What does it do?|
 |:------------:|:----------------|
 |```torch.save```|Saves a seralized object to disk using python's pickle utility. Models, tensors and various other python object like dictionaries can be saved using ```torch.save```.|
-|```torch.load```|Uses ```pickle``'s unpicking features to deserialize and load pickled Python object files (like models, tensor or dictionaries) into memory. You can also set which device to load to object to (CPU or GPU etc.)|
+|```torch.load```|Uses ```pickle```'s unpicking features to deserialize and load pickled Python object files (like models, tensor or dictionaries) into memory. You can also set which device to load to object to (CPU or GPU etc.)|
 |```torch.nn.Module.load_state_dict```|Loads a model's parameter dictionary (```model.state_dict()```) using a saved ```state_dict()``` object.|
 
 #### How to save a pytorch model?
