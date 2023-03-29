@@ -26,4 +26,6 @@ torch.save(model.state_dict(), PATH)
 ```
 > **Note** : It's common convention for PyTorch saved models or objects to end with ```.pt``` or ```.pth```, like ```saved_model_01.pth```.
 
+
+These information captured from this (blog)[https://www.learnpytorch.io]
 কি কেমন দিলাম? :wink:
