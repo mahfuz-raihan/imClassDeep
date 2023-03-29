@@ -1,6 +1,6 @@
 ### How to check the content of a pytorch model
 
-```python3
+```python
 # Set manual seed since nn.Parameter are randomly initialzied
 torch.manual_seed(42)
 
@@ -10,3 +10,5 @@ model_0 = LinearRegressionModel() # you can make your own and here's just a exam
 # Check the nn.Parameter(s) within the nn.Module subclass we created
 list(model_0.parameters())
 ```
+
+These information captured from this [blog](https://www.learnpytorch.io)

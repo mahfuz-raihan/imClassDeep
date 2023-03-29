@@ -89,4 +89,4 @@ Training a model has a certain loop, we are decsribing below:
 
 
 
-These information captured from this (blog)[https://www.learnpytorch.io]
+These information captured from this [blog](https://www.learnpytorch.io)
