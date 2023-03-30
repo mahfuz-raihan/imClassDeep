@@ -71,14 +71,19 @@ Training a model has a certain loop, we are decsribing below:
 4. **Perform Backpropgation on the loss**: Camputes the gradient of the loss with respect for every model parameters to be updated (each parameter with ```required_grad=True```). This is known as ```backpropagation```, or 'backward'(```loss.backward()```).
 5. **Step the optimizer (gradiant descent)**: Update the parameters with ```requires_grad=True```
 
+## 5. Improve a model
+Let's try to explore, how we improve our model
 
-
-
-
-
-
-
-
+|**Model impromenent technique**|**What does it do?**|
+|:-----------------------------:|--------------------|
+|**Add more layers**|Each layer potentially increases the learning capabilities of the mode with each layer being able ot learn some kind of new pattern in the data, more layers in often referred to as making your neural network deeper|
+|**Add more hidden units**|Similar to the abovbe, more hidden units per layers means a potential increase in learning capabilities of the model, more hidden units is often referred to as making your neural netwrok wider|
+|**Fitting for longer (more epochs)**|Your model might learn more if it had more opportunities to look a the data|
+|**Changing the activation functions**|some data just can't be fit with only straight line (like what we've seen), using non-linear activation fucntions can help with this (hint, hint)|
+|**Change the learning rate**| Less model sppecific, but still related, the learning rate of the optimizer decides how much a model should change its parameters each step, too much and the model overcorrect, too little and it's doesn't learn enough|
+|**Change the loss function**|Again,, less model specific but still important, different problems require different loss functions. For, example, a binary cross entropy loss function wor't work with a multi-class classification problem.|
+|**Use transfer learning**|Take a pretrained model from a problem domain that similar to yours and adjust it to your own problem.|
+> Note: we can adjust all of these by hand, they're referred to a hyperparameter*
 
 
 
