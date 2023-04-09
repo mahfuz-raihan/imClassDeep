@@ -28,4 +28,5 @@ torch.save(model.state_dict(), PATH)
 
 
 These information captured from this [blog](https://www.learnpytorch.io)
+
 কি কেমন দিলাম? :wink:
