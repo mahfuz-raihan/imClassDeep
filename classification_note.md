@@ -94,4 +94,5 @@ Let's try to explore, how we improve our model
 
 
 
+
 These information captured from this [blog](https://www.learnpytorch.io)
