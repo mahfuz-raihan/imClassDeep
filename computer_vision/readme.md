@@ -11,7 +11,7 @@ or figure out the different object in a image can be seperated which is called [
 
 ## CV libraries in pytorch
 | Pytorch module  | Description  |
-|:---------------:|:------------:|
+|---------------|------------|
 | ```torchvision```   | ```torchvision``` module contains datasets, model architrcture and image transformations often used in computer vision problem.  |
 | ```torchvision.datasets```  | we can find build-in computer vision datasets for image classfication, object detection, image captioning, video classfication and more.  |
 |  ```torchvision.models```  | ```torchvision.models``` contains well-performing and commonly used cv model architectures implemented in pytorch, we can use these with our own problems.  |
