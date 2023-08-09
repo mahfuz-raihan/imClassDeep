@@ -21,3 +21,23 @@ or figure out the different object in a image can be seperated which is called [
 
 
 Now, let's go to the excercise.....
+#### Input and output shapes of a computer vision model
+
+```python
+# What's the shape of the image?
+image.shape
+```
+The shape of the image tensor may ```[1, 28, 28] or [3, 128, 128]``` for more specification:
+```[color_channels=1/3, height=28/128, width=28/128]``` 
+here, ```color_channels=1``` means image is grayscale and  ```color_channels=3```, image is colorfull.
+
+```[batch_size, height, width, color_channels](NHWC)``` color channels last is perform better.
+
+```[batch_size, color_channels, height, width](NCHW)``` color channels first
+Example:
+- ```python 
+    shape = [None, 28, 28, 1] # for grayscale
+    shpae = [None, 3, 28, 28] # for color image
+    shape = [32, 28, 28, 1] # 32 is very common batch size
+    ```
+> The above will vary depending ont he problelm we are working on.
