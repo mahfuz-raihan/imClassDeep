@@ -60,3 +60,14 @@ We use some parapmeter in the ```FashionMNISModelv0()``` class:
 - ```input_shape```: How many features we will input in the model, we use pixel by pixel target (for example, 28 pixel high by 28 pixel wide = 784 feature)
 - ```hidden units```: Number of units in the hidden layer(s), this should be small for instance. 
 - ```output_shape```: ```len(class_names)``` if we work with multiclass classification problem. In our dataset, we require one output neuron for each class. 
+
+## Model 2: Build CNN 
+
+But the question is, **What model should I use**?
+We know that, CNN are good for image, are there any other model types we should aware of? 
+
+the below table can elaborate the questions:
+|**Problem Type**|**Model to use**|**Code example**|
+|----------------|----------------|-------------------|
+|structured data (excel spreadsheets, row and columns data)|Gradient boosted model, random forests, XGBoost| ```sklearn.ensemble, XGBoost```libraries|
+|unstructured data (images, audio, language)| Convolutioinal Neural Networks, Transformers| ```torchvision.models, huggingFace``` transformers|
